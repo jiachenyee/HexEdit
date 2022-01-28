@@ -8,32 +8,25 @@
 import SwiftUI
 import UniformTypeIdentifiers
 
-extension UTType {
-    static var exampleText: UTType {
-        UTType(importedAs: "com.example.plain-text")
-    }
-}
-
 struct HexEditDocument: FileDocument {
-    var text: String
+    static var readableContentTypes: [UTType] = [.item]
+    
+    var data: Data = Data()
 
-    init(text: String = "Hello, world!") {
-        self.text = text
+    init(data: Data = Data()) {
+        self.data = data
     }
-
-    static var readableContentTypes: [UTType] { [.exampleText] }
+//    static var readableContentTypes: [UTType] { [.exampleText] }
 
     init(configuration: ReadConfiguration) throws {
-        guard let data = configuration.file.regularFileContents,
-              let string = String(data: data, encoding: .utf8)
+        guard let data = configuration.file.regularFileContents
         else {
             throw CocoaError(.fileReadCorruptFile)
         }
-        text = string
+        self.data = data
     }
     
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        let data = text.data(using: .utf8)!
         return .init(regularFileWithContents: data)
     }
 }

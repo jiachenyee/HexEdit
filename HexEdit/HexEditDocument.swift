@@ -9,7 +9,7 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct HexEditDocument: FileDocument {
-    static var readableContentTypes: [UTType] = [.item]
+    static var readableContentTypes: [UTType] = [.data]
     
     var data: Data = Data()
 

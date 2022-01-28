@@ -16,8 +16,7 @@ struct HexEditDocument: FileDocument {
     init(data: Data = Data()) {
         self.data = data
     }
-//    static var readableContentTypes: [UTType] { [.exampleText] }
-
+    
     init(configuration: ReadConfiguration) throws {
         guard let data = configuration.file.regularFileContents
         else {

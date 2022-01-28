@@ -10,6 +10,7 @@ import UniformTypeIdentifiers
 
 struct ContentView: View {
     @Binding var document: HexEditDocument
+    @State var addMenuPresented = false
     
     var body: some View {
         
@@ -38,9 +39,14 @@ struct ContentView: View {
         .toolbar {
             ToolbarItem(placement: .navigation) {
                 Button {
-                    
+                    addMenuPresented = true
                 } label: {
                     Image(systemName: "plus")
+                }
+                .popover(isPresented: $addMenuPresented) {
+                    AddTextView { str in
+                        document.data.append(contentsOf: str)
+                    }
                 }
             }
         }

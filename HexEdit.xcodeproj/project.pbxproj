@@ -12,6 +12,7 @@
 		32E9CB2627A315B90064E210 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E9CB2527A315B90064E210 /* ContentView.swift */; };
 		32E9CB2827A315B90064E210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E9CB2727A315B90064E210 /* Assets.xcassets */; };
 		32E9CB2B27A315B90064E210 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E9CB2A27A315B90064E210 /* Preview Assets.xcassets */; };
+		32E9CB3427A39EAC0064E210 /* AddTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E9CB3327A39EAC0064E210 /* AddTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		32E9CB2A27A315B90064E210 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		32E9CB2C27A315B90064E210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32E9CB2D27A315B90064E210 /* HexEdit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HexEdit.entitlements; sourceTree = "<group>"; };
+		32E9CB3327A39EAC0064E210 /* AddTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				32E9CB2127A315B90064E210 /* HexEditApp.swift */,
 				32E9CB2327A315B90064E210 /* HexEditDocument.swift */,
 				32E9CB2527A315B90064E210 /* ContentView.swift */,
+				32E9CB3327A39EAC0064E210 /* AddTextView.swift */,
 				32E9CB2727A315B90064E210 /* Assets.xcassets */,
 				32E9CB2C27A315B90064E210 /* Info.plist */,
 				32E9CB2D27A315B90064E210 /* HexEdit.entitlements */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32E9CB2427A315B90064E210 /* HexEditDocument.swift in Sources */,
+				32E9CB3427A39EAC0064E210 /* AddTextView.swift in Sources */,
 				32E9CB2227A315B90064E210 /* HexEditApp.swift in Sources */,
 				32E9CB2627A315B90064E210 /* ContentView.swift in Sources */,
 			);

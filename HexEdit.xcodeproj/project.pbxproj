@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32A4200227A4D591006829D3 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 32A4200127A4D591006829D3 /* Introspect */; };
 		32E9CB2227A315B90064E210 /* HexEditApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E9CB2127A315B90064E210 /* HexEditApp.swift */; };
 		32E9CB2427A315B90064E210 /* HexEditDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E9CB2327A315B90064E210 /* HexEditDocument.swift */; };
 		32E9CB2627A315B90064E210 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E9CB2527A315B90064E210 /* ContentView.swift */; };
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A4200227A4D591006829D3 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +95,9 @@
 			dependencies = (
 			);
 			name = HexEdit;
+			packageProductDependencies = (
+				32A4200127A4D591006829D3 /* Introspect */,
+			);
 			productName = HexEdit;
 			productReference = 32E9CB1E27A315B90064E210 /* HexEdit.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 32E9CB1527A315B90064E210;
+			packageReferences = (
+				32A4200027A4D591006829D3 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 32E9CB1F27A315B90064E210 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32A4200027A4D591006829D3 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32A4200127A4D591006829D3 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32A4200027A4D591006829D3 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 32E9CB1627A315B90064E210 /* Project object */;
 }

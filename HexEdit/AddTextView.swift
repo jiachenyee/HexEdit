@@ -12,7 +12,7 @@ struct AddTextView: View {
     @State var inputString = ""
     @Environment(\.presentationMode) var presentationMode
     
-    var insertData: ((Data) -> ())
+    var insertData: ((String) -> ())
     
     var body: some View {
         VStack {
@@ -20,7 +20,13 @@ struct AddTextView: View {
             
             TextField("", text: $inputString)
                 .onSubmit {
-                    insertData(Data(inputString.utf8))
+                    insertData(Data(inputString.utf8).reduce(into: "") { acc, byte in
+                        var s = String(byte, radix: 16)
+                        if s.count == 1 {
+                            s = "0" + s
+                        }
+                        acc += s + " "
+                    })
                     presentationMode.wrappedValue.dismiss()
                 }
             let data = Data(inputString.utf8).reduce(into: "") { acc, byte in
